@@ -26,8 +26,8 @@ cf-domain=<cloudflare target zone>
 
 ts-key=<tailscale api key>
 ts-tailnet=<tailnet>
-# ts-clientid=<oauth clientid, optional>
-# ts-clientsecret=<oauth clientsecret, optional>
+# ts-client-id=<oauth clientid, optional>
+# ts-client-secret=<oauth clientsecret, optional>
 
 # prefix=<prefix for dns records, optional>
 # postfix=<postfix for dns records, optional>
@@ -40,13 +40,13 @@ ts-tailnet=<tailnet>
 secrets:
   cf-key:
     file: "./cloudflare-key.txt"
-  # either, use ts-key for an api key or ts-clientid and ts-clientsecret for oauth
+  # either, use ts-key for an api key or ts-client-id and ts-client-secret for oauth
   ts-key:
     file: "./tailscale-key.txt"
   ts-clientid:
-    file: "./tailscale-clientid.txt" 
+    file: "./tailscale-client-id.txt" 
   ts-clientsecret:
-    file: "./tailscale-clientsecret.txt"
+    file: "./tailscale-client-secret.txt"
 
 services:
   cloudflare-dns-sync:
